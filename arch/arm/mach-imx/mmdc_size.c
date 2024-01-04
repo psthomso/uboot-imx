@@ -17,7 +17,9 @@ static const unsigned char bank_lookup[] = {3, 2};
 struct esd_mmdc_regs {
 	u32 ctl;
 	u32 pdc;
+#if !defined(CONFIG_MX7ULP)
 	u32 otc;
+#endif
 	u32 cfg0;
 	u32 cfg1;
 	u32 cfg2;
